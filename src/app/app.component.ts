@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'login-app';
+    username:string="";
+    password:string="";
+    msg:string="";
+
+    checkLogin(){
+      if(this.username=="admin" && this.password=="admin123"){
+        this.msg="valid Credential";
+      }else{
+        this.msg="Invalid Credential";
+      }
+      
+    }
 }
